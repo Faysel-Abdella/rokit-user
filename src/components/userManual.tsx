@@ -68,14 +68,14 @@ export default function UserManualList() {
           {visibleManuals.map((manual) => (
             <div
               key={manual.id}
-              className="flex items-center text-black bg-white  justify-between py-5 border-b-[0.5px] border-[#00000080]"
+              className="flex items-center text-black bg-white  justify-between gap-4 py-5 border-b-[0.5px] border-[#00000080]"
             >
-              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-black flex-1">
+              <h2 className="text-base sm:text-xl md:text-2xl lg:text-3xl font-semibold text-black flex-1">
                 {manual.title}
               </h2>
 
               <button
-                className="flex items-center justify-center gap-2 w-full max-w-[200px] sm:min-w-[120px] h-[52px] sm:h-[44px] border-2 border-black rounded-md px-4 py-2 text-black"
+                className="flex items-center justify-center gap-2  w-[140px] sm:min-w-[120px] h-[52px] sm:h-[44px] border-2 border-black rounded-md px-4 py-2 text-black"
                 onClick={() => {
                   setShowTerms(true);
                   const link = document.createElement("a");
@@ -86,8 +86,8 @@ export default function UserManualList() {
                   document.body.removeChild(link);
                 }}
               >
-                <HiDownload className="w-6 h-6 sm:w-5 sm:h-5" />
-                <span className="font-bold text-xl sm:text-lg">
+                <HiDownload className="size-5" />
+                <span className="font-bold text-sm sm:text-lg">
                   {t("download")}
                 </span>
               </button>
